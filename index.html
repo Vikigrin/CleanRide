@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CleanRide | Мобільна хімчистка Red Deer</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+    header { background: #111; color: white; padding: 1.5em; text-align: center; }
+    nav { text-align: center; margin-top: 1em; }
+    nav button { margin: 0 0.5em; padding: 0.5em 1em; cursor: pointer; }
+    section { padding: 2em; max-width: 800px; margin: auto; background: white; margin-bottom: 1em; border-radius: 8px; }
+    h2 { color: #222; }
+    .gallery img { width: 45%; margin: 2%; border-radius: 8px; }
+    .price-table { display: flex; gap: 2em; margin-top: 1em; }
+    .card { flex: 1; background: #eee; padding: 1em; border-radius: 8px; }
+    form input, form textarea { width: 100%; padding: 0.7em; margin-top: 0.5em; margin-bottom: 1em; border: 1px solid #ccc; border-radius: 4px; }
+    form button { padding: 0.7em 1.5em; background: #111; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    footer { text-align: center; font-size: 0.8em; color: #777; padding: 2em; }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+  </script>
+</head>
+<body onload="switchLang('uk')">
+  <header>
+    <h1>CleanRide</h1>
+    <p data-lang="uk">Ви відпочиваєте — ми чистимо</p>
+    <p data-lang="en" style="display:none;">You relax — we clean</p>
+    <nav>
+      <button onclick="switchLang('uk')">🇺🇦 Українська</button>
+      <button onclick="switchLang('en')">🇬🇧 English</button>
+    </nav>
+  </header>
+
+  <section>
+    <h2 data-lang="uk">Послуги</h2>
+    <h2 data-lang="en" style="display:none;">Services</h2>
+    <div class="price-table">
+      <div class="card">
+        <h3>Sedan</h3>
+        <p data-lang="uk">від 200$</p>
+        <p data-lang="en" style="display:none;">from $200</p>
+      </div>
+      <div class="card">
+        <h3>SUV</h3>
+        <p data-lang="uk">від 250$</p>
+        <p data-lang="en" style="display:none;">from $250</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-lang="uk">Акції</h2>
+    <h2 data-lang="en" style="display:none;">Promotions</h2>
+    <ul>
+      <li data-lang="uk">👥 “Приведи друга” — Клієнт і його друг отримують по $20 знижки при бронюванні.</li>
+      <li data-lang="en" style="display:none;">👥 “Refer a friend” — both you and your friend get $20 off.</li>
+      <li data-lang="uk">📅 Понеділок — “Чистий старт”: знижка 10% на всі послуги.</li>
+      <li data-lang="en" style="display:none;">📅 Monday — “Fresh Start”: 10% off all services.</li>
+    </ul>
+  </section>
+
+  <section class="gallery">
+    <h2 data-lang="uk">Галерея: До / Після</h2>
+    <h2 data-lang="en" style="display:none;">Gallery: Before / After</h2>
+    <img src="https://i.imgur.com/RMgz1GX.jpg" alt="before"/>
+    <img src="https://i.imgur.com/H83zEID.jpg" alt="after"/>
+  </section>
+
+  <section>
+    <h2 data-lang="uk">Залишити заявку</h2>
+    <h2 data-lang="en" style="display:none;">Book a Service</h2>
+    <form>
+      <input type="text" placeholder="Ваше ім’я / Your Name" required />
+      <input type="tel" placeholder="Телефон / Phone" required />
+      <textarea rows="4" placeholder="Коментар / Comment"></textarea>
+      <button type="submit">Надіслати / Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>+1 (403) 307-5893 | Telegram: @vika_grin</p>
+    <p>CleanRide © 2025</p>
+  </footer>
+</body>
+</html>
